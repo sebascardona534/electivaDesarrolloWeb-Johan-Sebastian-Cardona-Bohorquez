@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partes y partes</title>
+<style>
+/* General styling */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e4e4e4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    margin-top: 95px;
+    margin-bottom: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.container {
+    background-color: rgb(75, 72, 72);
+    color: #ccc;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(47, 160, 81);
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+/* Navbar styling */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+}
+
+li {
+    float: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+/* Product Styling */
+
+.product {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.product right {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.product img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.productDetails {
+    color: #111;
+    padding: 15px;
+    flex: 1;
+}
+
+.product h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.product span {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #474747;
+    width: 5px;
+}
+
+.comprar {
+    padding: 10px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    align-items: right;
+}
+
+.comprar:hover {
+    background-color: #005f3c;
+}
+
+.product img {
+    width: auto; 
+    height: 200; 
+}
+
+/* Footer styling */
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; 
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<ul>
+    <li><a class="active">PARTES Y PARTES - MENU</a></li>
+    <li><a href="login.html">LOGIN</a></li>
+    <li><a href="registro.html">REGISTRO</a></li>
+    <li><a href="catalogo.html">CATÁLOGO</a></li>
+</ul>
+
+<!-- Main content -->
+<main>
+    <div class="container">
+        <h1>Catálogo de productos</h1>
+        <div class="product">
+            <img src="/Imagenes/filtro-de-aire-de-alto-flujo-azul-tunix.jpg" alt="producto1">
+            <div class="productDetails">
+                <h3>Filtro de alto flujo Simota</h3>
+                <span>Este filtro de aire de alto flujo aumenta los caballos de fuerza del automovil al que se le instale.
+                </span>
+                <p><a href="compra.html" class="comprar">Comprar</a></p>
+            </div>
+            <img src="/Imagenes/MAXXIS-MAZ1.jpg" alt="producto2">
+            <div class="productDetails">
+                <h3>Llantas Maxxis 195/50 R15</h3>
+                <span>Estas llantas brindan mas agarre y durabilidad a la hora de rodar en las calles de la ciudad o en carretera destapada.
+                </span>
+                <p><a href="compra.html" class="comprar">Comprar</a></p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="/Imagenes/image_1024.jpeg" alt="producto3">
+            <div class="productDetails">
+                <h3>Rines de lujo</h3>
+                <span>Estos rines de lujo daran un estilo mas deportivo a tu automovil y llamara mas a atencion.
+                </span>
+                <p><a href="compra.html" class="comprar">Comprar</a></p>
+            </div>
+            <img src="/Imagenes/Luces-led-01.jpg" alt="producto4">
+            <div class="productDetails">
+                <h3>Luces Led H4</h3>
+                <span>Estas luces led te brindaran una mejor iluminacion en la calle y un tono de color mas frio.
+                </span>
+                <p><a href="compra.html" class="comprar">Comprar</a></p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="/Imagenes/51seoHg1rrL.jpg" alt="producto5">
+            <div class="productDetails">
+                <h3>Resonador</h3>
+                <span>Hecho en acero inoxidable y con un sonido mas deportivo. Con un durabilidad mayor a los de fabrica.
+                </span>
+                <p><a href="compra.html" class="comprar">Comprar</a></p>
+            </div>
+            <img src="/Imagenes/22 (2).jpg" alt="producto6">
+            <div class="productDetails">
+                <h3>Calipers de freno Brembo</h3>
+                <span>Calipers para mejorar la frenada de cualquier tipo de auto, con mayor presion y durabilidad.
+                </span>
+                <p><a href="compra.html" class="comprar">Comprar</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>   
+    <p>Hecho por Sebastian Cardona y Steven Saldarriaga. 2024</p>
+</footer>
+
+</body>
+</html>
