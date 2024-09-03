@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh; 
+    min-height: 100vh;
 }
 
 main {
@@ -22,7 +22,7 @@ main {
     padding: 0;
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    flex: 1;
 }
 
 .container {
@@ -32,9 +32,10 @@ main {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(47, 160, 81);
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     margin: auto;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -51,15 +52,17 @@ label {
     margin-bottom: 5px;
 }
 
-input {
+input, select {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     background-color: #04AA6D;
     color: white;
     border: none;
@@ -67,6 +70,7 @@ button {
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -79,13 +83,6 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 /* Navbar styling */
 ul {
     list-style-type: none;
@@ -93,9 +90,9 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -121,10 +118,6 @@ li a:hover:not(.active) {
     background-color: #04AA6D;
 }
 
-.crearc {
-    color: #ccc;
-}
-
 /* Footer styling */
 footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -132,18 +125,18 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
+/* Responsive styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
 
-/* Footer styling */
-footer {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto; 
+    input, select, button {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
@@ -173,13 +166,13 @@ footer {
 
             <label for="tipoDocumento">Tipo de Documento:</label>
             <select id="tipoDocumento" name="tipoDocumento" required>
-                <option value="cc">Cedula de ciudadania</option>
+                <option value="cc">Cédula de ciudadanía</option>
                 <option value="ti">Tarjeta de identidad</option>
-                <option value="cce">Cedula de extranjeria</option>
-                <option value="pasaporte">pasaporte</option>
+                <option value="cce">Cédula de extranjería</option>
+                <option value="pasaporte">Pasaporte</option>
             </select>
 
-            <label for="cc">Numero de documento:</label>
+            <label for="cc">Número de documento:</label>
             <input type="number" id="cc" name="cc" required>
 
             <label for="cel">Celular:</label>
@@ -190,20 +183,20 @@ footer {
 
             <label for="tipoCard">Tipo de tarjeta:</label>
             <select id="tipoCard" name="tipoCard" required>
-                <option value="deb">Debito</option>
-                <option value="cred">Credito</option>
+                <option value="deb">Débito</option>
+                <option value="cred">Crédito</option>
             </select>
 
-            <label for="card">Numero de tarjeta:</label>
+            <label for="card">Número de tarjeta:</label>
             <input type="number" id="card" name="card" required>
 
-            <label for="seg">Numero de seguridad:</label>
+            <label for="seg">Número de seguridad:</label>
             <input type="number" id="seg" name="seg" required>
 
             <label for="ciu">Ciudad:</label>
             <input type="text" id="ciu" name="ciu" required>
 
-            <label for="dir">Direccion de envio:</label>
+            <label for="dir">Dirección de envío:</label>
             <input type="text" id="dir" name="dir" required>
 
             <button type="submit">Confirmar Compra</button>
@@ -214,7 +207,7 @@ footer {
 
 <!-- Footer -->
 <footer>   
-    <p>Hecho por Sebastian Cardona y Steven Saldarriaga. 2024</p>
+    <p>Hecho por Sebastián Cardona y Steven Saldarriaga. 2024</p>
 </footer>
 
 </body>

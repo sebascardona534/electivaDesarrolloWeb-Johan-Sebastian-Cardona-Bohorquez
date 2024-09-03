@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Partes y partes</title>
 <style>
 /* General styling */
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #e4e4e4;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh; /* Full height of the viewport */
+    box-sizing: border-box;
 }
 
 main {
     margin-top: 95px;
     margin-bottom: 50px;
-    padding: 0;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     flex: 1; 
+    box-sizing: border-box;
 }
 
 .container {
@@ -36,6 +37,7 @@ main {
     max-width: 500px;
     width: 100%;
     margin: auto;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -46,24 +48,20 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 label {
     margin-bottom: 5px;
 }
 
-input {
+input, select {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 button {
@@ -75,8 +73,8 @@ button {
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -87,7 +85,6 @@ p {
     text-align: center;
     margin-top: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
 }
 
 /* Navbar styling */
@@ -105,7 +102,7 @@ ul {
 
 li {
     float: left;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 li a {
@@ -126,7 +123,7 @@ li a:hover:not(.active) {
 }
 
 .crearc {
-  color:#ccc;
+    color: #ccc;
 }
 
 /* Footer styling */
@@ -136,7 +133,19 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: auto; 
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
@@ -163,13 +172,13 @@ footer {
 
             <label for="tipoDocumento">Tipo de Documento:</label>
             <select id="tipoDocumento" name="tipoDocumento" required>
-                <option value="cc">Cedula de ciudadania</option>
+                <option value="cc">Cédula de ciudadanía</option>
                 <option value="ti">Tarjeta de identidad</option>
-                <option value="cce">Cedula de extranjeria</option>
-                <option value="pasaporte">pasaporte</option>
+                <option value="cce">Cédula de extranjería</option>
+                <option value="pasaporte">Pasaporte</option>
             </select>
 
-            <label for="cc">Numero de documento:</label>
+            <label for="cc">Número de documento:</label>
             <input type="number" id="cc" name="cc" required>
 
             <label for="cel">Celular:</label>

@@ -32,7 +32,7 @@ main {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(47, 160, 81);
-    max-width: 1500px;
+    max-width: 1200px;
     width: 100%;
     margin: auto;
 }
@@ -50,9 +50,7 @@ p {
     text-align: center;
     margin-top: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
 }
-
 
 /* Navbar styling */
 ul {
@@ -93,44 +91,41 @@ li a:hover:not(.active) {
 
 .product {
     display: flex;
-    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    background-color: white;
-}
-
-.product right {
-    display: flex;
-    margin: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: white;
+    padding: 15px;
 }
 
 .product img {
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .productDetails {
     color: #111;
     padding: 15px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.product h3 {
+.productDetails h3 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.product span {
-    margin-top: 5px;
-    margin-bottom: 20px;
+.productDetails span {
+    margin-bottom: 15px;
     color: #474747;
-    width: 5px;
 }
 
 .comprar {
@@ -140,22 +135,14 @@ li a:hover:not(.active) {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    align-items: right;
+    display: inline-block;
 }
 
 .comprar:hover {
     background-color: #005f3c;
-}
-
-.product img {
-    width: auto; 
-    height: 200; 
 }
 
 /* Footer styling */
@@ -166,6 +153,24 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: auto; 
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productDetails {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .product img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
 }
 </style>
 </head>
@@ -187,15 +192,15 @@ footer {
             <img src="/Imagenes/filtro-de-aire-de-alto-flujo-azul-tunix.jpg" alt="producto1">
             <div class="productDetails">
                 <h3>Filtro de alto flujo Simota</h3>
-                <span>Este filtro de aire de alto flujo aumenta los caballos de fuerza del automovil al que se le instale.
-                </span>
+                <span>Este filtro de aire de alto flujo aumenta los caballos de fuerza del automovil al que se le instale.</span>
                 <p><a href="compra.html" class="comprar">Comprar</a></p>
             </div>
+        </div>
+        <div class="product">
             <img src="/Imagenes/MAXXIS-MAZ1.jpg" alt="producto2">
             <div class="productDetails">
                 <h3>Llantas Maxxis 195/50 R15</h3>
-                <span>Estas llantas brindan mas agarre y durabilidad a la hora de rodar en las calles de la ciudad o en carretera destapada.
-                </span>
+                <span>Estas llantas brindan más agarre y durabilidad a la hora de rodar en las calles de la ciudad o en carretera destapada.</span>
                 <p><a href="compra.html" class="comprar">Comprar</a></p>
             </div>
         </div>
@@ -203,15 +208,15 @@ footer {
             <img src="/Imagenes/image_1024.jpeg" alt="producto3">
             <div class="productDetails">
                 <h3>Rines de lujo</h3>
-                <span>Estos rines de lujo daran un estilo mas deportivo a tu automovil y llamara mas a atencion.
-                </span>
+                <span>Estos rines de lujo darán un estilo más deportivo a tu automóvil y llamarán más la atención.</span>
                 <p><a href="compra.html" class="comprar">Comprar</a></p>
             </div>
+        </div>
+        <div class="product">
             <img src="/Imagenes/Luces-led-01.jpg" alt="producto4">
             <div class="productDetails">
                 <h3>Luces Led H4</h3>
-                <span>Estas luces led te brindaran una mejor iluminacion en la calle y un tono de color mas frio.
-                </span>
+                <span>Estas luces led te brindarán una mejor iluminación en la calle y un tono de color más frío.</span>
                 <p><a href="compra.html" class="comprar">Comprar</a></p>
             </div>
         </div>
@@ -219,15 +224,15 @@ footer {
             <img src="/Imagenes/51seoHg1rrL.jpg" alt="producto5">
             <div class="productDetails">
                 <h3>Resonador</h3>
-                <span>Hecho en acero inoxidable y con un sonido mas deportivo. Con un durabilidad mayor a los de fabrica.
-                </span>
+                <span>Hecho en acero inoxidable y con un sonido más deportivo. Con una durabilidad mayor a los de fábrica.</span>
                 <p><a href="compra.html" class="comprar">Comprar</a></p>
             </div>
+        </div>
+        <div class="product">
             <img src="/Imagenes/22 (2).jpg" alt="producto6">
             <div class="productDetails">
                 <h3>Calipers de freno Brembo</h3>
-                <span>Calipers para mejorar la frenada de cualquier tipo de auto, con mayor presion y durabilidad.
-                </span>
+                <span>Calipers para mejorar la frenada de cualquier tipo de auto, con mayor presión y durabilidad.</span>
                 <p><a href="compra.html" class="comprar">Comprar</a></p>
             </div>
         </div>
