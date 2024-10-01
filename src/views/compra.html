@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partes y partes</title>
+<style>
+/* General styling */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e4e4e4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 95px;
+    margin-bottom: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container {
+    background-color: rgb(75, 72, 72);
+    color: #ccc;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(47, 160, 81);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f3c;
+}
+
+p {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Navbar styling */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+li {
+    float: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+/* Footer styling */
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input, select, button {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<ul>
+    <li><a class="active">PARTES Y PARTES - MENU</a></li>
+    <li><a href="/">LOGIN</a></li>
+    <li><a href="/register">REGISTRO</a></li>
+    <li><a href="/src/views/catalogo.html">CATÁLOGO</a></li>
+</ul>
+
+<!-- Main content -->
+<main>
+    <div class="container">
+        <h1>Confirmación de compra</h1>
+        <form action="procesar-compra.html" method="post">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1" required>
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="tipoDocumento">Tipo de Documento:</label>
+            <select id="tipoDocumento" name="tipoDocumento" required>
+                <option value="cc">Cédula de ciudadanía</option>
+                <option value="ti">Tarjeta de identidad</option>
+                <option value="cce">Cédula de extranjería</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
+
+            <label for="cc">Número de documento:</label>
+            <input type="number" id="cc" name="cc" required>
+
+            <label for="cel">Celular:</label>
+            <input type="number" id="cel" name="cel" required>
+
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tipoCard">Tipo de tarjeta:</label>
+            <select id="tipoCard" name="tipoCard" required>
+                <option value="deb">Débito</option>
+                <option value="cred">Crédito</option>
+            </select>
+
+            <label for="card">Número de tarjeta:</label>
+            <input type="number" id="card" name="card" required>
+
+            <label for="seg">Número de seguridad:</label>
+            <input type="number" id="seg" name="seg" required>
+
+            <label for="ciu">Ciudad:</label>
+            <input type="text" id="ciu" name="ciu" required>
+
+            <label for="dir">Dirección de envío:</label>
+            <input type="text" id="dir" name="dir" required>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+        
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>   
+    <p>Hecho por Sebastian Cardona y Steven Saldarriaga. 2024</p>
+</footer>
+
+</body>
+</html>
